@@ -1,0 +1,51 @@
+.example button {
+    background-color: gold;
+    color: darkslategray;
+    font-size: 1.2em;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bolder;
+}
+.example button:hover{
+    background-color: darkslategray;
+    color: yellow;
+}
+.example input {
+    padding: 5px 10px;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.2em;
+}
+.modal-window {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.modal-window_by-input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+.modal-window_by-input > * {
+    display: block;
+    width: 100%;
+}
+.triangle {
+    text-align: center;
+}
+.triangle p {
+    margin: 5px 0;
+}
+.conditional-operator {
+    text-align: center;
+}
+.arrays {
+    text-align: center;
+}
+.arrays > input {
+    margin: 5px;
+}

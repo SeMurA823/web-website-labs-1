@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-learn</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles/main-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/main-context.css">
+    <link rel="stylesheet" type="text/css" href="styles/examples.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            
+        </div>
+        <ul class="header-menu">
+            <li class="header-menu__item">
+                <a class="header-menu__href">JS</a>
+            </li>
+            <li class="header-menu__item">
+                <a class="header-menu__href">Примеры</a>
+            </li>
+            <li class="header-menu__item">
+                <p class="header-menu__username"></p>
+            </li>
+        </ul>
+    </header>
+    <div class="context">
+        <div class="about">
+            <h2>Что такое JavaScript?</h2>
+            <p>
+                JavaScript — это язык программирования, 
+                который даёт возможность реализовывать сложное поведение веб-страницы.
+                Каждый раз, когда вы видите веб-страницу, она не только отображает статическое содержимое, 
+                но и делает большее - своевременно отображает обновление контента, выводит интерактивные карты, 
+                2D/3D анимацию, прокручивает видео и т.д. - будьте уверены, здесь не обошлось без JavaScript.
+            </p>
+        </div>
+        <div class="examples">
+            <ul class="examples-menu">
+                <h2>Примеры</h2>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Модальное окно</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Площадь треугольника</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Условный оператор</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Массивы</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Таймер</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Тест</a>
+                </li>
+                <li class="examples-menu__item">
+                    <a class="examples-menu__href">Заставка</a>
+                </li>
+            </ul>
+            <div class="example" id="modal-window">
+                <h2 class="example__h">Пример 1. Модальное окно</h2>
+                <p class="example__about">Введите имя в поле ввода или вызовите всплывающие окно ввода, куда также введите имя</p>
+                <div class="modal-window">
+                    <div class="modal-window_by-input">
+                        <input placeholder="Имя" class="modal-window__input-name" id="input-name" required>
+                        <button class="modal-window__btn">Готово</button>
+                    </div>
+                    <div class="modal-window_by-prompt">
+                        <button class="modal-window__btn">Вызвать модальное окно</button>
+                    </div>
+                </div>
+            </div>
+            <div class="example" id="triangle">
+                <h2 class="example__h">Пример 2. Площадь треугольника</h2>
+                <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
+                <div class="triangle">
+                    <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0"></p>
+                    <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0"></p>
+                    <p class="triangle__square">Площадь треугольника: <input id="square-triangle" type="number" value="0"></p>
+                </div>
+            </div>
+            <div class="example" id="conditional-operator">
+                <h2 class="example__h">Пример 3. Сравнение строк</h2>
+                <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
+                <div class="conditional-operator">
+                    <p>
+                        <input type="text" placeholder="Java">
+                        <span id="compare">!=</span>
+                        <input type="text" placeholder="JavaScript">
+                    </p>
+                </div>
+            </div>
+            <div class="example" id="arrays">
+                <h2 class="example">Пример 4. Массивы</h2>
+                <p class="example__about">Введите пять элементов числового массива</p>
+                <div class="arrays">
+                    <input type="number" id="arr1" value="0">
+                    <input type="number" id="arr2" value="0">
+                    <input type="number" id="arr3" value="0">
+                    <input type="number" id="arr4" value="0">
+                    <input type="number" id="arr5" value="0">
+                    <p>Максимальное значение: <span id="max-arr">0</span></p>
+                    <p>Минимальное значение: <span id="min-arr">0</span></p>
+                </div>
+                
+            </div>
+            <div class="example" id="timer"></div>
+            <div class="example" id="test"></div>
+            <div class="example" id="screensaver"></div>
+        </div>
+    </div>
+
+</body>
+</html>

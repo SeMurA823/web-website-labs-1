@@ -1,0 +1,9 @@
+.context {
+    padding: 70px 50px;
+    padding-top: 60px;
+}
+.examples-menu__item{
+    text-decoration: none;
+    list-style-type: none;
+    cursor: default;
+}
