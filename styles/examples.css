@@ -11,29 +11,44 @@
     color: yellow;
 }
 .example input {
+    border-radius: 10px;
     padding: 5px 10px;
     border: none;
-    background-color: whitesmoke;
+    background-color: #c8c8c8;
     color: black;
     font-size: 1.2em;
 }
 .modal-window {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
 }
+.modal-window__or {
+    margin: 10px;
+}
 .modal-window_by-input {
+    max-width: 100%;
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.modal-window_by-input > * {
+.modal-window_by-input * {
     display: block;
-    width: 100%;
+    margin: 10px;
 }
+
+.modal-window__btn {
+    border-radius: 10px;
+}
+
 .triangle {
     text-align: center;
 }
@@ -42,6 +57,9 @@
 }
 .conditional-operator {
     text-align: center;
+}
+.conditional-operator__input {
+    margin: 10px;
 }
 .arrays {
     text-align: center;
