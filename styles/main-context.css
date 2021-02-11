@@ -1,5 +1,9 @@
 .context {
-    padding: 70px 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 768px;
+    padding: 10px;
     padding-top: 60px;
 }
 .examples-menu__item{
