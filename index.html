@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,8 +24,8 @@
             <li class="header-menu__item">
                 <a class="header-menu__href">Примеры</a>
             </li>
-            <li class="header-menu__item">
-                <p class="header-menu__username"></p>
+            <li class="header-menu__item" id="user-item">
+                <p class="header-menu__username" id="user-name"></p>
             </li>
         </ul>
     </header>
@@ -71,10 +71,11 @@
                 <div class="modal-window">
                     <div class="modal-window_by-input">
                         <input placeholder="Имя" class="modal-window__input-name" id="input-name" required>
-                        <button class="modal-window__btn">Готово</button>
+                        <button class="modal-window__btn" onclick="callModalWindowByInput()">Готово</button>
                     </div>
+                    <p class="modal-window__or">ИЛИ</p>
                     <div class="modal-window_by-prompt">
-                        <button class="modal-window__btn">Вызвать модальное окно</button>
+                        <button class="modal-window__btn" onclick="callModalWindowByPrompt()">Вызвать модальное окно</button>
                     </div>
                 </div>
             </div>
@@ -82,8 +83,8 @@
                 <h2 class="example__h">Пример 2. Площадь треугольника</h2>
                 <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
                 <div class="triangle">
-                    <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0"></p>
-                    <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0"></p>
+                    <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0" id="length-side"></p>
+                    <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0" id="length-height"></p>
                     <p class="triangle__square">Площадь треугольника: <input id="square-triangle" type="number" value="0"></p>
                 </div>
             </div>
@@ -92,9 +93,9 @@
                 <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
                 <div class="conditional-operator">
                     <p>
-                        <input type="text" placeholder="Java">
+                        <input type="text" placeholder="Java" id="str1" class="conditional-operator__input">
                         <span id="compare">!=</span>
-                        <input type="text" placeholder="JavaScript">
+                        <input type="text" placeholder="JavaScript" id="str2" class="conditional-operator__input">
                     </p>
                 </div>
             </div>
@@ -102,11 +103,11 @@
                 <h2 class="example__h">Пример 4. Массивы</h2>
                 <p class="example__about">Введите пять элементов числового массива</p>
                 <div class="arrays">
-                    <input type="number" id="arr1" value="0">
-                    <input type="number" id="arr2" value="0">
-                    <input type="number" id="arr3" value="0">
-                    <input type="number" id="arr4" value="0">
-                    <input type="number" id="arr5" value="0">
+                    <input type="number" id="arr1" value="0" onchange="statistic()">
+                    <input type="number" id="arr2" value="0" onchange="statistic()">
+                    <input type="number" id="arr3" value="0" onchange="statistic()">
+                    <input type="number" id="arr4" value="0" onchange="statistic()">
+                    <input type="number" id="arr5" value="0" onchange="statistic()">
                     <p>Максимальное значение: <span id="max-arr">0</span></p>
                     <p>Минимальное значение: <span id="min-arr">0</span></p>
                 </div>
@@ -115,146 +116,35 @@
                 <h2 class="example__h">Пример 5. Таймер</h2>
                 <p class="example__about">Чтобы начать отсчёт нажмите на кнопку СТАРТ, для остановки - СТОП</p>
                 <div class="timer">
-                    <p class="timer__value">Прошедшее время: <span id="time">00:00:00</span></p>
-                    <button class="timer__btn-start">СТАРТ</button>
-                    <button class="timer__btn-stop">СТОП</button>
+                    <p class="timer__value">Прошедшее время:
+                        <span id="time">
+                            0:00:00
+                        </span>
+                    </p>
+                    <button class="timer__btn-start" onclick="startTimer()">СТАРТ</button>
+                    <button class="timer__btn-stop" onclick="stopTimer()">СТОП</button>
+                    <button class="timer__btn-reset" onclick="resetTimer()">СБРОС</button>
                 </div>
             </div>
             <div class="example" id="test">
                 <h2 class="example__h">Пример 6. Тест</h2>
                 <p class="example__about">Тест состоящий из 10 вопросов</p>
-                <div class="test">
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 1</h3>
-                        <p class="question__p">Какие циклы есть в языке JavaScript?</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-1" class="answers__radio" type="radio" id="ans-1-1">
-                                <label for="ans-1-1">for, while, do while, foreach</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-1" class="answers__radio" type="radio" id="ans-1-2">
-                                <label for="ans-1-2">for, forMap, foreach, while, do while</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-1" class="answers__radio" type="radio" id="ans-1-3">
-                                <label for="ans-1-3">for, while, do while</label>
-                            </div>
-                        </div>
+                <form class="test">
+                    <div class="test__content" id="test-content"></div>
+                    <div class="test__info">
+                        <p class="test__result" id="test-result"></p>
+                        <button class="test__btn" onclick="checkAnswer()" type="button" id="test-btn">Готово</button>
                     </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 2</h3>
-                        <p class="question__p">Какой правильный способ для комментарии в JavaScript?</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-2" class="answers__radio" type="radio" id="ans-2-1">
-                                <label for="ans-2-1">// Это комментарий</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-2" class="answers__radio" type="radio" id="ans-2-2">
-                                <label for="ans-2-2"> '' Это комментарий</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-2" class="answers__radio" type="radio" id="ans-2-3">
-                                <label for="ans-2-3">&lt; !-- Это комментарий. --></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 3</h3>
-                        <p class="question__p">Как сделать комментарий с более чем одной линии?</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-3" class="answers__radio" type="radio" id="ans-3-1">
-                                <label for="ans-3-1">/* Этот комментарий имеет более, чем одной линии*/</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-3" class="answers__radio" type="radio" id="ans-3-2">
-                                <label for="ans-3-2">//Этот комментарий имеет более, чем одной линии//</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-3" class="answers__radio" type="radio" id="ans-3-3">
-                                <label for="ans-3-3">&lt;!-- Этот комментарий имеет более, чем одной линии --></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 4</h3>
-                        <p class="question__p">Как округляется число 3.14 до ближайшего целого числа?</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-4" class="answers__radio" type="radio" id="ans-4-1">
-                                <label for="ans-4-1">round(3.14)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-4" class="answers__radio" type="radio" id="ans-4-2">
-                                <label for="ans-4-2">Math.rnd(3.14)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-4" class="answers__radio" type="radio" id="ans-4-3">
-                                <label for="ans-4-3">Math.round(3.14)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 5</h3>
-                        <p class="question__p">Правильный синтаксис WHILE цикла</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-5" class="answers__checkbox" type="checkbox" id="ans-5-1">
-                                <label for="ans-5-1">while (i <= 7)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-5" class="answers__checkbox" type="checkbox" id="ans-5-2">
-                                <label for="ans-5-2">while (true)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-5" class="answers__checkbox" type="checkbox" id="ans-5-3">
-                                <label for="ans-5-3">while (i = 0 ; i < 7; i++)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 6</h3>
-                        <p class="question__p">Правильный синтаксис FOR цикла</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-1">
-                                <label for="ans-6-1">for (i = 0; i < 10; i++)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-2">
-                                <label for="ans-6-2">for (i = 0; true; i++)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-3">
-                                <label for="ans-6-3">for (i > 0)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">
-                        <h3 class="question__h">Вопрос 7</h3>
-                        <p class="question__p">Правильный синтаксис FOR цикла</p>
-                        <div class="answers">
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-1">
-                                <label for="ans-6-1">for (i = 0; i < 10; i++)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-2">
-                                <label for="ans-6-2">for (i = 0; true; i++)</label>
-                            </div>
-                            <div class="answers__p">
-                                <input name="ans-6" class="answers__checkbox" type="checkbox" id="ans-6-3">
-                                <label for="ans-6-3">for (i > 0)</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="example" id="screensaver"></div>
         </div>
     </div>
-
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/square.js"></script>
+    <script src="scripts/equals.js"></script>
+    <script src="scripts/arrays.js"></script>
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/test.js"></script>
 </body>
 </html>
