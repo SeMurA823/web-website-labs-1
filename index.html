@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/examples.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-logo">
             
         </div>
@@ -30,7 +30,7 @@
         </ul>
     </header>
     <div class="context">
-        <div class="about">
+        <div class="about adaptive-background" data-background="gold">
             <h2>Что такое JavaScript?</h2>
             <p>
                 JavaScript — это язык программирования, 
@@ -41,31 +41,32 @@
             </p>
         </div>
         <div class="examples">
-            <ul class="examples-menu">
+            <ul class="examples-menu adaptive-background" data-background="whitesmoke">
                 <h2>Примеры</h2>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Модальное окно</a>
+                    <a class="examples-menu__href" href="#modal-window">Модальное окно</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Площадь треугольника</a>
+                    <a class="examples-menu__href" href="#square-triangle">Площадь треугольника</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Условный оператор</a>
+                    <a class="examples-menu__href" href="#conditional-operator">Условный оператор</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Массивы</a>
+                    <a class="examples-menu__href" href="#arrays">Массивы</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Таймер</a>
+                    <a class="examples-menu__href" href="#timer">Таймер</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Тест</a>
+                    <a class="examples-menu__href" href="#test">Тест</a>
                 </li>
                 <li class="examples-menu__item">
-                    <a class="examples-menu__href">Заставка</a>
+                    <a class="examples-menu__href" href="#screensaver">Заставка</a>
                 </li>
             </ul>
-            <div class="example" id="modal-window">
+            <div class="example adaptive-background" id="modal-window" data-background="indigo">
+                <img src="images/iconmonstr-window-14-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 1. Модальное окно</h2>
                 <p class="example__about">Введите имя в поле ввода или вызовите всплывающие окно ввода, куда также введите имя</p>
                 <div class="modal-window">
@@ -79,7 +80,8 @@
                     </div>
                 </div>
             </div>
-            <div class="example" id="triangle">
+            <div class="example adaptive-background" id="triangle" data-background="lightgreen">
+                <img src="images/iconmonstr-triangle-4-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 2. Площадь треугольника</h2>
                 <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
                 <div class="triangle">
@@ -88,7 +90,8 @@
                     <p class="triangle__square">Площадь треугольника: <input id="square-triangle" type="number" value="0"></p>
                 </div>
             </div>
-            <div class="example" id="conditional-operator">
+            <div class="example adaptive-background" id="conditional-operator" data-background="LightSkyBlue">
+                <img src="images/iconmonstr-script-4-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 3. Сравнение строк</h2>
                 <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
                 <div class="conditional-operator">
@@ -99,7 +102,8 @@
                     </p>
                 </div>
             </div>
-            <div class="example" id="arrays">
+            <div class="example adaptive-background" id="arrays" data-background="LightCoral">
+                <img src="images/iconmonstr-code-4-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 4. Массивы</h2>
                 <p class="example__about">Введите пять элементов числового массива</p>
                 <div class="arrays">
@@ -112,7 +116,8 @@
                     <p>Минимальное значение: <span id="min-arr">0</span></p>
                 </div>
             </div>
-            <div class="example" id="timer">
+            <div class="example adaptive-background" id="timer" data-background="LightCyan">
+                <img src="images/iconmonstr-time-6-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 5. Таймер</h2>
                 <p class="example__about">Чтобы начать отсчёт нажмите на кнопку СТАРТ, для остановки - СТОП</p>
                 <div class="timer">
@@ -121,12 +126,13 @@
                             0:00:00
                         </span>
                     </p>
-                    <button class="timer__btn-start" onclick="startTimer()">СТАРТ</button>
-                    <button class="timer__btn-stop" onclick="stopTimer()">СТОП</button>
-                    <button class="timer__btn-reset" onclick="resetTimer()">СБРОС</button>
+                    <button class="timer__btn timer__btn_start" onclick="startTimer()">СТАРТ</button>
+                    <button class="timer__btn timer__btn_stop" onclick="stopTimer()">СТОП</button>
+                    <button class="timer__btn timer__btn_reset" onclick="resetTimer()">СБРОС</button>
                 </div>
             </div>
-            <div class="example" id="test">
+            <div class="example adaptive-background" id="test" data-background="Beige">
+                <img src="images/iconmonstr-help-1-240.png" height="48" class="example__illustr">
                 <h2 class="example__h">Пример 6. Тест</h2>
                 <p class="example__about">Тест состоящий из 10 вопросов</p>
                 <form class="test">
@@ -137,14 +143,25 @@
                     </div>
                 </form>
             </div>
-            <div class="example" id="screensaver"></div>
+            <div class="example adaptive-background" id="screensaver" data-background="gray">
+
+                <div class="screensaver">
+                    <button class="screensaver__btn" onclick="openScreenSaver()">Показать фон</button>
+                    <div class="window" id="screensaver-window">
+                        <p class="window__date" id="window-date"></p>
+                        <p class="window__username" id="window-username"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="scripts/main.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/square.js"></script>
     <script src="scripts/equals.js"></script>
     <script src="scripts/arrays.js"></script>
     <script src="scripts/timer.js"></script>
     <script src="scripts/test.js"></script>
+    <script src="scripts/screensaver.js"></script>
 </body>
 </html>
