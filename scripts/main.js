@@ -1,3 +1,4 @@
+const MAIN = document.getElementById('main');
 let examplesList = document.getElementsByClassName('adaptive-background');
 let offsetExamplesList = [];
 for (let i = 0; i < examplesList.length; i++){
@@ -14,7 +15,8 @@ function getIndexBlock(){
     let indexBlock = 0;
     for (let i = 0; i < examplesList.length; i++) {
         console.log(examplesList.item(i).clientHeight);
-        if (window.pageYOffset + window.innerHeight / 2 >= examplesList.item(i).offsetTop && window.pageYOffset + window.innerHeight / 2 <= examplesList.item(i).offsetTop + examplesList.item(i).clientHeight) {
+        if (window.pageYOffset + window.innerHeight / 2 >= examplesList.item(i).offsetTop
+            && window.pageYOffset + window.innerHeight / 2 <= examplesList.item(i).offsetTop + examplesList.item(i).clientHeight) {
             console.log("I = " + i);
             return i;
         }
@@ -31,9 +33,9 @@ function updateColorBlock(){
         oldIndexBlock = indexBlock;
     }
     if (indexBlock < 0) {
-        document.body.style.backgroundColor = 'white';
+        MAIN.style.backgroundColor = 'white';
     } else {
-        document.body.style.backgroundColor = examplesList.item(indexBlock).getAttribute('data-background');
+        MAIN.style.backgroundColor = examplesList.item(indexBlock).getAttribute('data-background');
     }
 }
 

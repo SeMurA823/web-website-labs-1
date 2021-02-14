@@ -29,132 +29,143 @@
             </li>
         </ul>
     </header>
-    <div class="context">
-        <div class="about adaptive-background" data-background="gold">
-            <h2>Что такое JavaScript?</h2>
-            <p>
-                JavaScript — это язык программирования, 
-                который даёт возможность реализовывать сложное поведение веб-страницы.
-                Каждый раз, когда вы видите веб-страницу, она не только отображает статическое содержимое, 
-                но и делает большее - своевременно отображает обновление контента, выводит интерактивные карты, 
-                2D/3D анимацию, прокручивает видео и т.д. - будьте уверены, здесь не обошлось без JavaScript.
-            </p>
-        </div>
-        <div class="examples">
-            <ul class="examples-menu adaptive-background" data-background="whitesmoke">
-                <h2>Примеры</h2>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#modal-window">Модальное окно</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#square-triangle">Площадь треугольника</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#conditional-operator">Условный оператор</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#arrays">Массивы</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#timer">Таймер</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#test">Тест</a>
-                </li>
-                <li class="examples-menu__item">
-                    <a class="examples-menu__href" href="#screensaver">Заставка</a>
-                </li>
-            </ul>
-            <div class="example adaptive-background" id="modal-window" data-background="indigo">
-                <img src="images/iconmonstr-window-14-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 1. Модальное окно</h2>
-                <p class="example__about">Введите имя в поле ввода или вызовите всплывающие окно ввода, куда также введите имя</p>
-                <div class="modal-window">
-                    <div class="modal-window_by-input">
-                        <input placeholder="Имя" class="modal-window__input-name" id="input-name" required>
-                        <button class="modal-window__btn" onclick="callModalWindowByInput()">Готово</button>
-                    </div>
-                    <p class="modal-window__or">ИЛИ</p>
-                    <div class="modal-window_by-prompt">
-                        <button class="modal-window__btn" onclick="callModalWindowByPrompt()">Вызвать модальное окно</button>
-                    </div>
-                </div>
-            </div>
-            <div class="example adaptive-background" id="triangle" data-background="lightgreen">
-                <img src="images/iconmonstr-triangle-4-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 2. Площадь треугольника</h2>
-                <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
-                <div class="triangle">
-                    <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0" id="length-side"></p>
-                    <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0" id="length-height"></p>
-                    <p class="triangle__square">Площадь треугольника: <input id="square-triangle" type="number" value="0"></p>
-                </div>
-            </div>
-            <div class="example adaptive-background" id="conditional-operator" data-background="LightSkyBlue">
-                <img src="images/iconmonstr-script-4-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 3. Сравнение строк</h2>
-                <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
-                <div class="conditional-operator">
+    <main id="main">
+        <div class="context">
+            <div class="adaptive-background" data-background="transparent">
+                <div class="about">
+                    <h2>Что такое JavaScript?</h2>
                     <p>
-                        <input type="text" placeholder="Java" id="str1" class="conditional-operator__input">
-                        <span id="compare">!=</span>
-                        <input type="text" placeholder="JavaScript" id="str2" class="conditional-operator__input">
+                        JavaScript — это язык программирования,
+                        который даёт возможность реализовывать сложное поведение веб-страницы.
+                        Каждый раз, когда вы видите веб-страницу, она не только отображает статическое содержимое,
+                        но и делает большее - своевременно отображает обновление контента, выводит интерактивные карты,
+                        2D/3D анимацию, прокручивает видео и т.д. - будьте уверены, здесь не обошлось без JavaScript.
                     </p>
                 </div>
             </div>
-            <div class="example adaptive-background" id="arrays" data-background="LightCoral">
-                <img src="images/iconmonstr-code-4-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 4. Массивы</h2>
-                <p class="example__about">Введите пять элементов числового массива</p>
-                <div class="arrays">
-                    <input type="number" id="arr1" value="0" onchange="statistic()">
-                    <input type="number" id="arr2" value="0" onchange="statistic()">
-                    <input type="number" id="arr3" value="0" onchange="statistic()">
-                    <input type="number" id="arr4" value="0" onchange="statistic()">
-                    <input type="number" id="arr5" value="0" onchange="statistic()">
-                    <p>Максимальное значение: <span id="max-arr">0</span></p>
-                    <p>Минимальное значение: <span id="min-arr">0</span></p>
+            <div class="examples">
+                <ul class="examples-menu adaptive-background" data-background="black">
+                    <h2 class="examples-menu__h">Примеры</h2>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#modal-window">Модальное окно</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#triangle">Площадь треугольника</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#conditional-operator">Условный оператор</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#arrays">Массивы</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#timer">Таймер</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#test">Тест</a>
+                    </li>
+                    <li class="examples-menu__item">
+                        <a class="examples-menu__href" href="#screensaver">Заставка</a>
+                    </li>
+                </ul>
+                <div class="example adaptive-background" id="modal-window" data-background="indigo">
+                    <img src="images/iconmonstr-window-14-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 1. Модальное окно</h2>
+                    <p class="example__about">Введите имя в поле ввода или вызовите всплывающие окно ввода, куда также введите имя</p>
+                    <div class="modal-window">
+                        <div class="modal-window_by-input">
+                            <input placeholder="Имя" class="modal-window__input-name" id="input-name" required>
+                            <button class="modal-window__btn" onclick="callModalWindowByInput()">Готово</button>
+                        </div>
+                        <p class="modal-window__or">ИЛИ</p>
+                        <div class="modal-window_by-prompt">
+                            <button class="modal-window__btn" onclick="callModalWindowByPrompt()">Вызвать модальное окно</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="example adaptive-background" id="timer" data-background="LightCyan">
-                <img src="images/iconmonstr-time-6-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 5. Таймер</h2>
-                <p class="example__about">Чтобы начать отсчёт нажмите на кнопку СТАРТ, для остановки - СТОП</p>
-                <div class="timer">
-                    <p class="timer__value">Прошедшее время:
-                        <span id="time">
+                <div class="example adaptive-background" id="triangle" data-background="lightgreen">
+                    <img src="images/iconmonstr-triangle-4-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 2. Площадь треугольника</h2>
+                    <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
+                    <div class="triangle">
+                        <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0" id="length-side"></p>
+                        <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0" id="length-height"></p>
+                        <p class="triangle__square">Площадь треугольника: <input id="square-triangle" type="number" value="0"></p>
+                    </div>
+                </div>
+                <div class="example adaptive-background" id="conditional-operator" data-background="LightSkyBlue">
+                    <img src="images/iconmonstr-script-4-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 3. Сравнение строк</h2>
+                    <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
+                    <div class="conditional-operator">
+                        <p>
+                            <input type="text" placeholder="Java" id="str1" class="conditional-operator__input">
+                            <span id="compare">!=</span>
+                            <input type="text" placeholder="JavaScript" id="str2" class="conditional-operator__input">
+                        </p>
+                    </div>
+                </div>
+                <div class="example adaptive-background" id="arrays" data-background="LightCoral">
+                    <img src="images/iconmonstr-code-4-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 4. Массивы</h2>
+                    <p class="example__about">Введите пять элементов числового массива</p>
+                    <div class="arrays">
+                        <input type="number" id="arr1" value="0" onchange="statistic()">
+                        <input type="number" id="arr2" value="0" onchange="statistic()">
+                        <input type="number" id="arr3" value="0" onchange="statistic()">
+                        <input type="number" id="arr4" value="0" onchange="statistic()">
+                        <input type="number" id="arr5" value="0" onchange="statistic()">
+                        <p>Максимальное значение: <span id="max-arr">0</span></p>
+                        <p>Минимальное значение: <span id="min-arr">0</span></p>
+                    </div>
+                </div>
+                <div class="example adaptive-background" id="timer" data-background="LightCyan">
+                    <img src="images/iconmonstr-time-6-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 5. Таймер</h2>
+                    <p class="example__about">Чтобы начать отсчёт нажмите на кнопку СТАРТ, для остановки - СТОП</p>
+                    <div class="timer">
+                        <p class="timer__value">Прошедшее время:
+                            <span id="time">
                             0:00:00
                         </span>
-                    </p>
-                    <button class="timer__btn timer__btn_start" onclick="startTimer()">СТАРТ</button>
-                    <button class="timer__btn timer__btn_stop" onclick="stopTimer()">СТОП</button>
-                    <button class="timer__btn timer__btn_reset" onclick="resetTimer()">СБРОС</button>
-                </div>
-            </div>
-            <div class="example adaptive-background" id="test" data-background="Beige">
-                <img src="images/iconmonstr-help-1-240.png" height="48" class="example__illustr">
-                <h2 class="example__h">Пример 6. Тест</h2>
-                <p class="example__about">Тест состоящий из 10 вопросов</p>
-                <form class="test">
-                    <div class="test__content" id="test-content"></div>
-                    <div class="test__info">
-                        <p class="test__result" id="test-result"></p>
-                        <button class="test__btn" onclick="checkAnswer()" type="button" id="test-btn">Готово</button>
+                        </p>
+                        <button class="timer__btn timer__btn_start" onclick="startTimer()">СТАРТ</button>
+                        <button class="timer__btn timer__btn_stop" onclick="stopTimer()">СТОП</button>
+                        <button class="timer__btn timer__btn_reset" onclick="resetTimer()">СБРОС</button>
                     </div>
-                </form>
-            </div>
-            <div class="example adaptive-background" id="screensaver" data-background="gray">
-
-                <div class="screensaver">
-                    <button class="screensaver__btn" onclick="openScreenSaver()">Показать фон</button>
-                    <div class="window" id="screensaver-window">
-                        <p class="window__date" id="window-date"></p>
-                        <p class="window__username" id="window-username"></p>
+                </div>
+                <div class="example adaptive-background" id="test" data-background="Beige">
+                    <img src="images/iconmonstr-help-1-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 6. Тест</h2>
+                    <p class="example__about">Тест состоящий из 10 вопросов</p>
+                    <form class="test">
+                        <div class="test__content" id="test-content"></div>
+                        <div class="test__info">
+                            <p class="test__result" id="test-result"></p>
+                            <button class="test__btn" onclick="checkAnswer()" type="button" id="test-btn">Готово</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="example adaptive-background" id="screensaver" data-background="#800080">
+                    <img src="images/iconmonstr-computer-thin-240.png" height="48" class="example__illustr">
+                    <h2 class="example__h">Пример 7. Заставка</h2>
+                    <p class="example__about">Для показа заставки нажмите на кнопку</p>
+                    <div class="screensaver">
+                        <button class="screensaver__btn" onclick="ScreenSaverFlex()">Показать фон</button>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
+    <!-- Фиксируется в теле -->
+    <div class="window" id="screensaver-window">
+        <p class="window__date" id="window-date"></p>
+        <p class="window__username" id="window-username"></p>
+        <p class="window__attention" id="window-attantion">[Чтобы закрыть кликните по экрану]</p>
     </div>
+    <footer id="footer">
+        <p>Semura823</p>
+    </footer>
     <script src="scripts/main.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/square.js"></script>

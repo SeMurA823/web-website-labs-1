@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    background-color: gold;
+    background-color: transparent;
     color: darkslategray;
     display: flex;
     flex-direction: row;
@@ -32,6 +32,7 @@
     padding: 0 10px;
 }
 .header-menu__item {
+    background-color: gold;
     text-decoration: none;
     list-style-type: none;
     display: inline-block;
