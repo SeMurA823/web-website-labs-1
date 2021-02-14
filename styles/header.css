@@ -39,18 +39,19 @@
     cursor:default;
 }
 
-.header-menu__href:hover {
+.header-menu__href:hover ,
+.header-menu__username:hover{
     background-color: darkslategray;
     color: gold;
 }
 
-.header-menu__href {
+.header-menu__href,
+.header-menu__username{
     display: block;
     color: black;
     padding: 10px 5px;
     text-transform: uppercase;
 }
-
 #user-item {
     display: none;
 }

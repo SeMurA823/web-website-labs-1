@@ -1,10 +1,5 @@
 const MAIN = document.getElementById('main');
 let examplesList = document.getElementsByClassName('adaptive-background');
-let offsetExamplesList = [];
-for (let i = 0; i < examplesList.length; i++){
-    offsetExamplesList.push(examplesList.item(i).offsetTop);
-}
-console.log(offsetExamplesList)
 
 let oldIndexBlock = 0;
 
@@ -39,6 +34,4 @@ function updateColorBlock(){
     }
 }
 
-window.addEventListener('scroll',()=>{
-    updateColorBlock();
-});
+window.addEventListener('scroll',updateColorBlock);
