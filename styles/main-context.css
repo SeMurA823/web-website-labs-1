@@ -9,14 +9,13 @@ main {
     justify-content: center;
     flex-direction: column;
     max-width: 768px;
-    padding: 10px;
-    padding-top: 60px;
+    padding: 60px 10px 10px;
 }
 .examples-menu * {
     color: white;
 }
 .examples-menu a {
-    text-decoration: none;
+    color: white;
 }
 .examples-menu__h {
     font-weight: bold;
@@ -29,7 +28,7 @@ main {
 .examples-menu__href{
     padding: 10px;
     display: block;
-
+    color: #2a004a;
     cursor: default;
 }
 .examples-menu__href:hover{

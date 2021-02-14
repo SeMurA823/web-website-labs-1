@@ -36,16 +36,18 @@
     text-decoration: none;
     list-style-type: none;
     display: inline-block;
-    padding: 10px 5px;
     cursor:default;
 }
 
-.header-menu__item:hover {
+.header-menu__href:hover {
     background-color: darkslategray;
     color: gold;
 }
 
 .header-menu__href {
+    display: block;
+    color: black;
+    padding: 10px 5px;
     text-transform: uppercase;
 }
 
