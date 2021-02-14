@@ -11,3 +11,16 @@
     list-style-type: none;
     cursor: default;
 }
+body {
+    transition: background-color 1s;
+}
+.adaptive-background {
+    transition: opacity 1s;
+    box-sizing: content-box;
+    min-height: 80vh;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

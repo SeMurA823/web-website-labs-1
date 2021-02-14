@@ -1,14 +1,14 @@
+.example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .example button {
-    background-color: gold;
-    color: darkslategray;
     font-size: 1.2em;
     border: none;
     padding: 5px 10px;
     font-weight: bolder;
-}
-.example button:hover{
-    background-color: darkslategray;
-    color: yellow;
 }
 .example input {
     border-radius: 10px;
@@ -18,6 +18,21 @@
     color: black;
     font-size: 1.2em;
 }
+.example__illustr {
+    margin: 40px 20px;
+}
+
+.example__about {
+    padding: 30px;
+}
+.example__h {
+    padding: 10px;
+}
+#modal-window {
+    color: white;
+    text-align: center;
+}
+
 .modal-window {
     display: flex;
     flex-direction: row;
@@ -46,6 +61,8 @@
 }
 
 .modal-window__btn {
+    background-color: #2a004a;
+    color: white;
     border-radius: 10px;
 }
 
@@ -66,4 +83,44 @@
 }
 .arrays > input {
     margin: 5px;
+}
+.timer__value {
+    color: cadetblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+#time {
+    font-size: 1.2em;
+    color: black;
+}
+.timer__btn {
+    border-radius: 10px;
+    margin: 10px;
+}
+.timer__btn_start{
+    background-color: green;
+    color: white;
+}
+
+.timer__btn_reset{
+    background-color: cadetblue;
+    color: white;
+}
+.timer__btn_stop{
+    background-color: indianred;
+    color: darkred;
+}
+.window {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
