@@ -84,6 +84,17 @@
 .arrays > input {
     margin: 5px;
 }
+.arrays__btn {
+    margin: 10px;
+    background-color: darkred;
+    color: indianred;
+    padding: 10px;
+    border-radius: 10px;
+}
+.arrays__btn:hover {
+    background-color: black;
+    color: red;
+}
 .timer__value {
     color: cadetblue;
     text-transform: uppercase;
