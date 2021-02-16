@@ -1,6 +1,7 @@
 
 let callModalWindow = (name) => {
     if (name === null) return;
+    if (name.length === 0) return;
     alert(name);
     localStorage.setItem('user',name);
     checkUserName();

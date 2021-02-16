@@ -14,18 +14,35 @@
     border-radius: 10px;
     padding: 5px 10px;
     border: none;
-    background-color: #c8c8c8;
-    color: black;
     font-size: 1.2em;
 }
+.example-prog {
+    background-color: rgba(#1a1a1aa2);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.example-prog * {
+    text-align: center;
+    color: white;
+}
 .example__illustr {
+    text-align: center;
     margin: 40px 20px;
 }
 
 .example__about {
+    text-align: center;
     padding: 30px;
 }
 .example__h {
+    text-align: center;
     padding: 10px;
 }
 #modal-window {
@@ -81,20 +98,35 @@
 .arrays {
     text-align: center;
 }
-.arrays > input {
-    margin: 5px;
+.array-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.array-item__input {
+    margin: 20px;
+    border-radius: 0;
+}
+.array-item__deleteBtn {
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/iconmonstr-x-mark-circle-thin-240.png');
+    background-size: 100% 100%;
+    background-color: white;
+    border-radius: 50%;
+}
+.array-item__deleteBtn:hover {
+    background-color: lightgray;
 }
 .arrays__btn {
     margin: 10px;
     background-color: darkred;
-    color: indianred;
+    color: rgb(255, 235, 235);
     padding: 10px;
     border-radius: 10px;
 }
-.arrays__btn:hover {
-    background-color: black;
-    color: red;
-}
+
 .timer__value {
     color: cadetblue;
     text-transform: uppercase;
@@ -102,9 +134,11 @@
     padding: 10px;
     text-align: center;
 }
-#time {
-    font-size: 1.2em;
-    color: black;
+.time {
+    background-color: transparent;
+    width: 4em;
+    text-align: center;
+    font-weight: bold;
 }
 .timer__btn {
     border-radius: 10px;
