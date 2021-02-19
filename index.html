@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-learn</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/main-style.css">
     <link rel="stylesheet" type="text/css" href="styles/header.css">
     <link rel="stylesheet" type="text/css" href="styles/main-context.css">
@@ -14,7 +14,7 @@
 <body>
     <header class="header" id="header">
         <div class="header-logo">
-            
+
         </div>
         <ul class="header-menu">
             <li class="header-menu__item">
@@ -30,6 +30,12 @@
     </header>
     <main id="main">
         <div class="context">
+            <div class="example-prog" id="help">
+                <p class="example-prog__p" id="help-text">
+
+                </p>
+                <button class="example-prog__btn" onclick="closeHelp()">Закрыть</button>
+            </div>
             <div class="adaptive-background" data-background="transparent" id="js">
                 <div class="about">
                     <h2>Что такое JavaScript?</h2>
@@ -69,14 +75,9 @@
                 </ul>
                 <div class="example adaptive-background" id="modal-window" data-background="indigo">
                     <img src="images/iconmonstr-window-14-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 1. Модальное окно <!--<button class="example__help" onclick="viewHelp('modal-window-help')">?</button>--></h2>
+                    <h2 class="example__h">Пример 1. Модальное окно <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Введите имя в поле ввода или вызовите всплывающие окно ввода, куда также введите имя</p>
-                    <div class="example-prog" id="modal-window-help">
-                        <p class="example-prog__p">
-                            Для реализации модального окна использовался метод 'alert', для сохранения имени в локальное хранилище (localStorage.setItem('user',name)).                
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+
                     <div class="modal-window">
                         <div class="modal-window_by-input">
                             <input placeholder="Имя" class="modal-window__input-name" id="input-name" required>
@@ -90,15 +91,8 @@
                 </div>
                 <div class="example adaptive-background" id="triangle" data-background="lightgreen">
                     <img src="images/iconmonstr-triangle-4-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 2. Площадь треугольника</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            Для вычисления применяются алгебраические операции / и *.
-                            Для начала вычисления срабатывает по событию 'change' в полях ввода 
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
-                    <p class="example__about">Введите длину основания и высоты треугольника в соответсвующие поля ввода </p>
+                    <h2 class="example__h">Пример 2. Площадь треугольника <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
+                    <p class="example__about">Введите длину основания и высоты треугольника в соответствующие поля ввода </p>
                     <div class="triangle">
                         <p class="triangle__len-side">Длина основания треугольника равна : <input type="number" value="0" id="length-side"></p>
                         <p class="triangle__len-height">Длина высоты треугольника равна : <input type="number" value="0" id="length-height"></p>
@@ -107,14 +101,7 @@
                 </div>
                 <div class="example adaptive-background" id="conditional-operator" data-background="LightSkyBlue">
                     <img src="images/iconmonstr-script-4-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 3. Сравнение строк</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            Для вычисления применяются операторы === и !==
-                            Для начала вычисления срабатывает по событию 'change' в полях ввода 
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+                    <h2 class="example__h">Пример 3. Сравнение строк <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Введите две строки в соответсвующие поля ввода</p>
                     <div class="conditional-operator">
                         <p>
@@ -126,19 +113,11 @@
                 </div>
                 <div class="example adaptive-background" id="arrays" data-background="LightCoral">
                     <img src="images/iconmonstr-code-4-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 4. Массивы</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            В массиве элементов находится минимальный и максимальный элемент 
-                            при помощи алгоритма поиска min и max в массиве
-                            Для начала вычисления срабатывает по событию 'click' на кнопку 
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+                    <h2 class="example__h">Пример 4. Массивы <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Введите элементы числового массива</p>
                     <div class="arrays">
                         <div class="arrays-item" id="arrays-items">
-                            
+
                         </div>
                         <button class="arrays__btn" id="array-add" onclick="addArrElement()">Добавить элемент</button>
                         <p>Максимальное значение: <span id="max-arr">0</span></p>
@@ -147,16 +126,7 @@
                 </div>
                 <div class="example adaptive-background" id="timer" data-background="LightCyan">
                     <img src="images/iconmonstr-time-6-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 5. Таймер</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            Для реализации таймера применятеся функция timeId = setInterval(/*функция*/,/*интервал*/),
-                            циклическии вызывающая функцию 
-                            Для остановки таймера использована clearInterval(timeId), отсанавлиющая циклическое выполнение функции
-                            Для сброса таймера обнгуляется значение времени
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+                    <h2 class="example__h">Пример 5. Таймер <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Чтобы начать отсчёт нажмите на кнопку СТАРТ, для остановки - СТОП</p>
                     <div class="timer">
                         <p class="timer__value">
@@ -171,16 +141,7 @@
                 </div>
                 <div class="example adaptive-background" id="test" data-background="Beige">
                     <img src="images/iconmonstr-help-1-240.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 6. Тест</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            Для реализации теста использовалась методы DOM: document.createElement(/*тег*/).
-                            Для реализации хранения вопросов и ответов используется массив вопросов и соответственно ответов к ним.
-                            Для реализации проверки ответов, циклом итерируемся по представлению ответов и самим ответам, если ответ не верный,
-                            то ответ "краснеет", иначе "зеленеет"                   
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+                    <h2 class="example__h">Пример 6. Тест <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Тест состоящий из 10 вопросов</p>
                     <form class="test">
                         <div class="test__content" id="test-content"></div>
@@ -192,16 +153,7 @@
                 </div>
                 <div class="example adaptive-background" id="screensaver" data-background="#800080">
                     <img src="images/comp-icon.png" height="48" class="example__illustr">
-                    <h2 class="example__h">Пример 7. Заставка</h2>
-                    <div class="example-prog">
-                        <p class="example-prog__p">
-                            Для реализации заставки использовалось изменение стиля припомощи своств элемента
-                            Для запуска заставки использовалась событие 'click' по кнопке. 
-                            Для отсановки заставки использовалась событие 'click' по области документа
-
-                        </p>
-                        <p class="example-prog__attantion">[Чтобы закрыть кликните по экрану]</p>
-                    </div>
+                    <h2 class="example__h">Пример 7. Заставка <sup class="example__help" onclick="viewHelp(this)">?</sup></h2>
                     <p class="example__about">Для показа заставки нажмите на кнопку</p>
                     <div class="screensaver">
                         <button class="screensaver__btn" onclick="ScreenSaverFlex()">Показать фон</button>

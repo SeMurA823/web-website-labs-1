@@ -16,12 +16,16 @@
     border: none;
     font-size: 1.2em;
 }
+.example__help {
+    font-size: 0.8em;
+}
 .example-prog {
-    background-color: rgba(#1a1a1aa2);
+    background-color: rgba(0,0,0,0.9);
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     position: fixed;
     display: none;
     flex-direction: column;
@@ -29,8 +33,19 @@
     justify-content: center;
 }
 .example-prog * {
+    margin: 20px;
     text-align: center;
     color: white;
+}
+.example-prog__p {
+    font-size: 1.2em;
+}
+.example-prog__btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: black;
 }
 .example__illustr {
     text-align: center;
