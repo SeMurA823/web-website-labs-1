@@ -1,5 +1,6 @@
 let hour, minute, sec;
 let timerId;
+let isTimerStarted = false;
 
 let printTimer = (hour, min, sec) => {
     document.getElementById('time-hour').value = hour;
@@ -7,16 +8,20 @@ let printTimer = (hour, min, sec) => {
     document.getElementById('time-sec').value = sec;
 }
 function startTimer() {
-    hour = Number(document.getElementById('time-hour').value);
-    min = Number(document.getElementById('time-minute').value);
-    sec = Number(document.getElementById('time-sec').value);
-    if (hour === NaN || min === NaN || sec === NaN) return;
-    timerId = setInterval(tick,1000);
-    document.getElementById('time-hour').disabled = true;
-    document.getElementById('time-minute').disabled = true;
-    document.getElementById('time-sec').disabled = true;
+    if (!isTimerStarted) {
+      isTimerStarted = true;
+      hour = Number(document.getElementById('time-hour').value);
+      min = Number(document.getElementById('time-minute').value);
+      sec = Number(document.getElementById('time-sec').value);
+      if (hour === NaN || min === NaN || sec === NaN) return;
+      timerId = setInterval(tick,1000);
+      document.getElementById('time-hour').disabled = true;
+      document.getElementById('time-minute').disabled = true;
+      document.getElementById('time-sec').disabled = true;
+    }
 }
 function stopTimer() {
+    isTimerStarted = false;
     clearInterval(timerId);
     document.getElementById('time-hour').disabled = false;
     document.getElementById('time-minute').disabled = false;
