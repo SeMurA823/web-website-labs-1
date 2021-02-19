@@ -1,6 +1,4 @@
-let array = [
-    
-];
+let array = [];
 //подсчёт максимума/минимума
 function statistic() {
     let max, min;
@@ -19,12 +17,6 @@ function statistic() {
     }
     document.getElementById('max-arr').textContent = max;
     document.getElementById('min-arr').textContent = min;
-}
-//проверка валидности элемента
-function validElement() {
-    if (Number(this.value) === NaN) {
-        this.classList.add('array-item__input_invalid');
-    }
 }
 //Удаления элемента из массива
 function removeArrElement() {
@@ -57,13 +49,3 @@ function addArrElement() {
     document.getElementById('arrays-items').appendChild(div);
 
 }
-
-function validArrElement() {
-    let arrElement = document.getElementsByClassName('array-item');
-    for (let i = 0; i < arrElement; i++) {
-        if (Number(arrElement.item(i).value) === NaN) {
-            arrElement.item(i).classList.add('array-item__input_invalid');
-        }
-    }
-}
-
