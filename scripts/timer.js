@@ -14,6 +14,7 @@ function startTimer() {
       min = Number(document.getElementById('time-minute').value);
       sec = Number(document.getElementById('time-sec').value);
       if (hour === NaN || min === NaN || sec === NaN) return;
+      if (hour < 0 || min < 0 || sec < 0) return;
       timerId = setInterval(tick,1000);
       document.getElementById('time-hour').disabled = true;
       document.getElementById('time-minute').disabled = true;
